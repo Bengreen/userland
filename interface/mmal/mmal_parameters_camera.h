@@ -37,6 +37,7 @@ All rights reserved.
 #define MMAL_PARAMETERS_CAMERA_H
 
 #include "mmal_parameters_common.h"
+#include "mmal_types.h"
 
 /*************************************************
  * ALWAYS ADD NEW ENUMS AT THE END OF THIS LIST! *

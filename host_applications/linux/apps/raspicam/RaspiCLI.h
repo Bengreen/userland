@@ -29,6 +29,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef RASPICLI_H_
 #define RASPICLI_H_
 
+#include "RaspiCamControl.h"
+
 typedef struct
 {
    int id;
@@ -38,19 +40,13 @@ typedef struct
    int num_parameters;
 } COMMAND_LIST;
 
-/// Cross reference structure, mode string against mode id
-typedef struct xref_t
-{
-   char *mode;
-   int mmal_mode;
-} XREF_T;
 
 
 void raspicli_display_help(const COMMAND_LIST *commands, const int num_commands);
 int raspicli_get_command_id(const COMMAND_LIST *commands, const int num_commands, const char *arg, int *num_parameters);
 
-int raspicli_map_xref(const char *str, const XREF_T *map, int num_refs);
-const char *raspicli_unmap_xref(const int en, XREF_T *map, int num_refs);
+void raspicamcontrol_display_help();
+int raspicamcontrol_parse_cmdline(RASPICAM_CAMERA_PARAMETERS *params, const char *arg1, const char *arg2);
 
 
 #endif

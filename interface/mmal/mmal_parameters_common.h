@@ -28,6 +28,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef MMAL_PARAMETERS_COMMON_H
 #define MMAL_PARAMETERS_COMMON_H
 
+#include "mmal_common.h"
+
 /** @defgroup MMAL_PARAMETER_IDS Pre-defined MMAL parameter IDs
  * @ingroup MmalParameters
  * @{
