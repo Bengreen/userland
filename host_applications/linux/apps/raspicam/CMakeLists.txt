@@ -22,7 +22,7 @@ set (COMMON_SOURCES
 add_executable(raspistill ${COMMON_SOURCES} RaspiStill.c  RaspiTex.c RaspiTexUtil.c tga.c ${GL_SCENE_SOURCES})
 add_executable(raspiyuv   ${COMMON_SOURCES} RaspiStillYUV.c)
 add_executable(raspivid   ${COMMON_SOURCES} RaspiVid.c)
-add_executable(raspiminimal RaspiCamControl.c RaspiStillMinimal.cc)
+add_executable(raspistillminimal RaspiCamControl.c RaspiStillMinimal.cc)
 
 
 set (MMAL_LIBS mmal_core mmal_util mmal_vc_client)
@@ -30,6 +30,6 @@ set (MMAL_LIBS mmal_core mmal_util mmal_vc_client)
 target_link_libraries(raspistill ${MMAL_LIBS} vcos bcm_host GLESv2 EGL m)
 target_link_libraries(raspiyuv   ${MMAL_LIBS} vcos bcm_host)
 target_link_libraries(raspivid   ${MMAL_LIBS} vcos bcm_host)
-target_link_libraries(raspiminimal   ${MMAL_LIBS} vcos bcm_host)
+target_link_libraries(raspistillminimal   ${MMAL_LIBS} vcos bcm_host)
 
 install(TARGETS raspistill raspiyuv raspivid RUNTIME DESTINATION bin)
